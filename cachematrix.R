@@ -1,5 +1,5 @@
-## This function is able to cache potentially time-consuming 
-##computations
+## This pair of functions cache the inverse of a matrix 
+## as matrix inversion is usually costly computation
 
 ## The below function creates a special "matrix" object, which can
 ## catche its inverse
@@ -12,11 +12,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 get <- function() x
-setmean <- function(mean) m <<- mean
-getmean <- function() m
+setsolve <- function(solve) m <<- solve
+getsolve <- function() m
 list(set = set, get = get,
-     setmean = setmean,
-     getmean = getmean)
+     setsolve = setsolve,
+     getsolve = getsolve)
 }
 
 ## The function below calculates the inverse of the above special "matrix"
